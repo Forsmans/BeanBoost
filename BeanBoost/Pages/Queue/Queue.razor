@@ -1,0 +1,62 @@
+﻿@page "/Queue"
+@inject BeanBoost.Data.BeanBoostDbContext DbContext;
+@inject NavigationManager Nav;
+
+<div class="container">
+    <div class="row pt-4 pb-0 align-items-center">
+        <div class="col-4 text-start">
+            <h2 class="text-primary">
+                Coffe Queue
+            </h2>
+        </div>
+        <div class="col-4 text-center">
+            <img src="Images/refresh.png" alt="Roll list" width="100" height="100" style="vertical-align: middle;" @onclick="() => UpdateList()" />
+        </div>
+        <div class="col-4 text-end pb-3">
+            <button class="btn btn-primary" @onclick="() => Join()"> Join Queue </button>
+
+        </div>
+    </div>
+</div>
+
+
+<br><br><br>
+
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr class="text-center">
+            <th>
+                Name
+            </th>
+            <th>
+                Position in the Queue
+            </th>
+            <th>
+                Times Bought
+            </th>
+            <th>
+                Settings
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var student in students.OrderBy(s => s.Position))
+        {
+            <tr>
+                <td class="text-center">@student.Name</td>
+                <td class="text-center">@student.Position</td>
+                <td class="text-center">@student.TimesBought</td>
+                <td>
+                    <div class="w-100 btn-group" role="group">
+                        <button class="btn btn-outline-success" @onclick="() => Edit(student)">Edit</button>
+                        <button class="btn btn-outline-danger" @onclick="@(e => DeleteStudent(student))" @onclick:preventDefault>Delete</button>
+
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

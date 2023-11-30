@@ -1,0 +1,21 @@
+﻿@page "/"
+@inject BeanBoost.Data.BeanBoostDbContext DbContext;
+@inject NavigationManager Nav
+
+<PageTitle>BeanBoost</PageTitle>
+
+<div class="d-flex justify-content-center">
+    <div class="text-center">
+        <img src="Images/coffe.gif" alt="Coffee Image" width="500" height="500" /> <br>
+        <h1 class="display-4">Cloud2023</h1><br>
+        <button class="btn btn-primary btn-lg mt-2" onclick="@Queue">Proceed to Queue</button>
+    </div>
+</div>
+
+
+@code{
+        private async Task Queue()
+        {
+            Nav.NavigateTo("/Queue");
+        }
+}

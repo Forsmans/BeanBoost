@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeanBoost", "BeanBoost\BeanBoost.csproj", "{0A3B85F1-5846-4FCF-8D8D-423F38E7762E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A3B85F1-5846-4FCF-8D8D-423F38E7762E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A3B85F1-5846-4FCF-8D8D-423F38E7762E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A3B85F1-5846-4FCF-8D8D-423F38E7762E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A3B85F1-5846-4FCF-8D8D-423F38E7762E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42DDDA86-C0ED-4183-ACAA-A7B9B71F5780}
+	EndGlobalSection
+EndGlobal
