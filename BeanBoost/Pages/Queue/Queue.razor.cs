@@ -20,6 +20,18 @@ namespace BeanBoost.Pages.Queue
 
         private async Task DeleteStudent(Student student)
         {
+
+            foreach(var s in students)
+            {
+                if (student.Position < s.Position)
+                {
+                    await DbContext.Students.UpdateOneAsync(
+                        Builders<Student>.Filter.Gte("Position", s.Position),
+                        Builders<Student>.Update.Inc("Position", -1)
+                     );
+                }
+            }
+            
             await DbContext.DeleteStudentAsync(student);
 
             var studentCursor = await DbContext.Students.FindAsync(_ => true);
